@@ -21,6 +21,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import java.util.regex.Pattern;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -54,10 +56,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (email.getText().toString().trim().length() != 0) {
-
-                    if (email.getText().toString().equals("user@employee.com") && password.getText().toString().equals("s3cr3t")) {
-                        Toast.makeText(MainActivity.this, "You are loggedin.", Toast.LENGTH_LONG).show();
-                    } else {
+                    if(isValidEmailId(email.getText().toString().trim())){
+                        if (email.getText().toString().equals("user@employee.com") && password.getText().toString().equals("s3cr3t")) {
+                            Toast.makeText(MainActivity.this, "You are loggedin.", Toast.LENGTH_LONG).show();
+                        }
+                    }else {
                         Toast.makeText(MainActivity.this, "Your email id or password is incorrect.", Toast.LENGTH_LONG).show();
                     }
                 } else {
@@ -87,6 +90,16 @@ public class MainActivity extends AppCompatActivity {
         });
         AlertDialog alertDialog = dialog.create();
         alertDialog.show();
+    }
+
+    private boolean isValidEmailId(String email){
+
+        return Pattern.compile("^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@"
+                + "((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                + "[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\."
+                + "([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                + "[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
+                + "([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$").matcher(email).matches();
     }
 }
 
