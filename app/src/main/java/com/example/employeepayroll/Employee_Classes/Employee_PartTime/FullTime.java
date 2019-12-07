@@ -14,8 +14,8 @@ public final class FullTime extends Employee implements Serializable {
     // constructor to input all values
 
 
-    public FullTime(int employeeID, String employeeName, int employeeAge, int salary, int bonus) {
-        super(employeeID, employeeName, employeeAge);
+    public FullTime(String employeeName, int employeeAge, int salary, int bonus) {
+        super(employeeName, employeeAge);
         this.salary = salary;
         this.bonus = bonus;
     }

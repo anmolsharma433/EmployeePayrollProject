@@ -1,4 +1,4 @@
-package com.example.employeepayroll.Vehicle;
+package com.example.employeepayroll.Vehicle_Classes;
 
 import java.io.Serializable;
 

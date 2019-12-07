@@ -10,8 +10,8 @@ public class Intern extends Employee implements Serializable {
     private String schoolName;
 
     //constructor to get values
-    public Intern(int employeeID, String employeeName, int employeeAge, String schoolName) {
-        super(employeeID, employeeName, employeeAge);
+    public Intern(String employeeName, int employeeAge, String schoolName) {
+        super(employeeName, employeeAge);
         this.schoolName = schoolName;
     }
 

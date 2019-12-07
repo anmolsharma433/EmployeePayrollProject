@@ -12,8 +12,8 @@ public final class CommisionBasedPartTime extends PartTime implements Serializab
     // constructor to input all values
 
 
-    public CommisionBasedPartTime(int employeeID, String employeeName, int employeeAge, float rate, int hoursWorked, int commisionPercentage) {
-        super(employeeID, employeeName, employeeAge, rate, hoursWorked);
+    public CommisionBasedPartTime(String employeeName, int employeeAge, float rate, int hoursWorked, int commisionPercentage) {
+        super(employeeName, employeeAge, rate, hoursWorked);
         this.commisionPercentage = commisionPercentage;
     }
 

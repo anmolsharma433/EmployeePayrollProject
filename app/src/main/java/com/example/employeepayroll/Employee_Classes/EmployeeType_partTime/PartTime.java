@@ -13,8 +13,8 @@ public abstract class PartTime extends Employee {
     // constructor to input all values
 
 
-    public PartTime(int employeeID, String employeeName, int employeeAge, float rate, int hoursWorked) {
-        super(employeeID, employeeName, employeeAge);
+    public PartTime(String employeeName, int employeeAge, float rate, int hoursWorked) {
+        super(employeeName, employeeAge);
         this.rate = rate;
         this.hoursWorked = hoursWorked;
     }

@@ -18,8 +18,8 @@ public final class FixedBasedPartTime extends PartTime {
     // constructor to input all values
 
 
-    public FixedBasedPartTime(int employeeID, String employeeName, int employeeAge, float rate, int hoursWorked, int fixedAmount) {
-        super(employeeID, employeeName, employeeAge, rate, hoursWorked);
+    public FixedBasedPartTime(String employeeName, int employeeAge, float rate, int hoursWorked, int fixedAmount) {
+        super(employeeName, employeeAge, rate, hoursWorked);
         this.fixedAmount = fixedAmount;
     }
 
