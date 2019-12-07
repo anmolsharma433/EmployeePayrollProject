@@ -17,7 +17,7 @@ import com.example.employeepayroll.R;
 
 import java.util.regex.Pattern;
 
-public class MainActivity extends AppCompatActivity {
+public class LogIn extends AppCompatActivity {
 
 
     TextView banner;
@@ -52,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
                 if (email.getText().toString().trim().length() != 0) {
                     if(isValidEmailId(email.getText().toString().trim())){
                         if (email.getText().toString().equals("user@employee.com") && password.getText().toString().equals("s3cr3t")) {
-                            Toast.makeText(MainActivity.this, "You are loggedin.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(LogIn.this, "You are loggedin.", Toast.LENGTH_LONG).show();
                         }
                     }else {
-                        Toast.makeText(MainActivity.this, "Your email id or password is incorrect.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(LogIn.this, "Your email id or password is incorrect.", Toast.LENGTH_LONG).show();
                     }
                 } else {
                     alertDialog();
