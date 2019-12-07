@@ -23,16 +23,9 @@ public final class FixedBasedPartTime extends PartTime {
         this.fixedAmount = fixedAmount;
     }
 
-    //override abstract function to calculate salary
-    @Override
-    public float calcEarnings() {
-
-        float salary = this.getRate() * this.getHoursWorked();
-        float totalSalary = fixedAmount+salary;
-        return totalSalary;
+    public double calEarnings()
+    {
+        return ((getRate()*getHoursWorked()) + getFixedAmount() + (getRate()*getHoursWorked()));
     }
-
-
-
-
 }
+
