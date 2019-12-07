@@ -1,8 +1,8 @@
-package com.example.employeepayroll.Employee;
+package com.example.employeepayroll.Employee_Classes;
 
 import java.time.LocalDate;
 
-public abstract class Employee{
+public class Employee{
 
     //declare variables
 
@@ -57,7 +57,6 @@ public abstract class Employee{
 
     }
 
-    public abstract float calcEarnings();
 
 
 

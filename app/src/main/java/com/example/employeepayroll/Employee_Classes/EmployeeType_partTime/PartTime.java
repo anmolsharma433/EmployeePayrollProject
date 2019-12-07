@@ -1,6 +1,8 @@
-package com.example.employeepayroll.Employee;
+package com.example.employeepayroll.Employee_Classes.EmployeeType_partTime;
 
-public abstract class PartTime extends Employee{
+import com.example.employeepayroll.Employee_Classes.Employee;
+
+public abstract class PartTime extends Employee {
 
 
     // create variables for Storing values

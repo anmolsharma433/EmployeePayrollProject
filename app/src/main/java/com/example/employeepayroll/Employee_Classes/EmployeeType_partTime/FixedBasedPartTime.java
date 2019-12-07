@@ -1,6 +1,6 @@
-package com.example.employeepayroll.Employee;
+package com.example.employeepayroll.Employee_Classes.EmployeeType_partTime;
 
-public final class FixedBasedPartTime extends PartTime{
+public final class FixedBasedPartTime extends PartTime {
 
     // create variables for stroing values
     int fixedAmount;

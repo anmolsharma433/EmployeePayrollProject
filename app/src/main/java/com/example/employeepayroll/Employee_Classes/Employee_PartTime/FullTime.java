@@ -1,6 +1,10 @@
-package com.example.employeepayroll.Employee;
+package com.example.employeepayroll.Employee_Classes.Employee_PartTime;
 
-public final class FullTime extends Employee{
+import com.example.employeepayroll.Employee_Classes.Employee;
+
+import java.io.Serializable;
+
+public final class FullTime extends Employee implements Serializable {
 
     // create variables for stroing values
 
@@ -32,13 +36,9 @@ public final class FullTime extends Employee{
         this.bonus = (int) bonus;
     }
 
-
-    //override abstract function to calculate salary
-    @Override
-    public float calcEarnings() {
-        float totalSalary = salary+bonus;
-        return totalSalary;
-
+    public double calEarnings()
+    {
+        return (getSalary() + getBonus());
     }
 
 

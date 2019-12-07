@@ -1,6 +1,8 @@
-package com.example.employeepayroll.Employee;
+package com.example.employeepayroll.Employee_Classes.EmployeeType_partTime;
 
-public final class CommisionBasedPartTime extends PartTime{
+import java.io.Serializable;
+
+public final class CommisionBasedPartTime extends PartTime implements Serializable {
 
 
     // create variables for stroing values
@@ -23,17 +25,9 @@ public final class CommisionBasedPartTime extends PartTime{
         this.commisionPercentage = commisionPercentage;
     }
 
-
-    //override abstract function to calculate salary
-    @Override
-    public float calcEarnings() {
-
-            // initialize new variables to temporary store commision and salary
-            float salary = this.getRate() * this.getHoursWorked();
-            float commision = salary * commisionPercentage/100;
-            float totalSalary = commision+salary;
-            return totalSalary;
-
-        }
+    public double calEarnings(){
+        return ((getRate()*getHoursWorked()) + ((commisionPercentage/100) *(getRate()*getHoursWorked())));
     }
+
+}
 

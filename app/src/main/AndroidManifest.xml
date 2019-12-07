@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Android_Ui.MainActivity"
             android:label="LogIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
