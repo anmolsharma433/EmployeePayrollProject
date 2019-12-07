@@ -11,4 +11,6 @@ public class Employee{
     private int employeeId;
     private String vehicleType;
     //Vehicle Class yet to be added
+
+
 }
